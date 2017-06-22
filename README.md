@@ -1,10 +1,10 @@
 Angular2のインストールは割愛
 
-とりあえず
-https://github.com/angular/angularfire2/blob/master/docs/1-install-and-setup.md
+とりあえず  
+https://github.com/angular/angularfire2/blob/master/docs/1-install-and-setup.md  
 これ見ればだいたい分かる。
 
-#AngularFire2のインストール
+# AngularFire2のインストール
 
 ng newしたプロジェクトフォルダに移動後以下のコマンドを実行する。
 
@@ -12,7 +12,7 @@ ng newしたプロジェクトフォルダに移動後以下のコマンドを�
 npm install firebase angularfire2 --save
 ```
 
-#FireBaseの情報
+# FireBaseの情報
 
 ngModuleにfirebaseの情報を書き込む
 
@@ -35,9 +35,16 @@ importするために以下を適切ば場所に書く。
 
 ```
 import { AngularFireModule } from 'angularfire2';
+```
 
+```
 imports: [
   BrowserModule,
   AngularFireModule.initializeApp(environment.firebase)
 ],
 ```
+
+# user authentication
+簡単にいうとログイン・ログアウト  
+https://github.com/angular/angularfire2/blob/master/docs/5-user-authentication.md  
+AngularFire2から使いたい場合はこれを3回くらい読めばできる。

@@ -1,7 +1,7 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { AngularFireModule } from 'angularfire2';
-
+import { AngularFireAuth } from 'angularfire2/auth';
 import { AppComponent } from './app.component';
 
 export const environment = {
@@ -24,7 +24,7 @@ export const environment = {
     BrowserModule,
     AngularFireModule.initializeApp(environment.firebase)
   ],
-  providers: [],
+  providers: [AngularFireAuth],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
