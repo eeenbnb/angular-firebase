@@ -48,3 +48,24 @@ imports: [
 簡単にいうとログイン・ログアウト  
 https://github.com/angular/angularfire2/blob/master/docs/5-user-authentication.md  
 AngularFire2から使いたい場合はこれを3回くらい読めばできる。
+
+流石に冗談で
+
+```
+import { AngularFireAuth } from 'angularfire2/auth';
+```
+
+を使えば良いっぽい。  
+componentだけに書いてたらDIエラーで辛い思いをしたのでmoduleのprovidersにも書いておく。  
+AngularFireAuthクラスのauthの中にログインするためのメソッドがあるっぽい。こんな感じで
+
+```
+this.afAuth.auth.signInWithRedirect(new firebase.auth.TwitterAuthProvider());
+```
+まあ詳しくはソースコードを見ればわかると思う。  
+
+# DBアクセス
+これも簡単でデータを保存出来たりする。  
+https://github.com/angular/angularfire2/blob/master/docs/2-retrieving-data-as-objects.md  
+このへんをよく読む。  
+authと一緒でmoduleにもDIする。

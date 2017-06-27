@@ -5,4 +5,10 @@
   </h1>
 </div>
 
-<a (click)="login()">login</a>
+<div> {{ (user | async)?.uid }} </div>
+<button (click)="login()">login</button>
+<button (click)="logout()">logout</button>
+<br>
+
+<textarea (change)="copyText($event)" rows="10" cols="60">{{ (dbConection | async)?.text  }}</textarea>
+<button *ngIf='(user | async)' (click)="save()">save</button>
